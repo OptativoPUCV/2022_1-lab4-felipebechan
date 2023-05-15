@@ -124,7 +124,7 @@ Pair *firstMap(HashMap *map) {
 
   return NULL;
 }
-
+//done
 Pair *nextMap(HashMap *map) {
   // itera desde current
   for (int i = map->current + 1; i < map->capacity; i++) {
