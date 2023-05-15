@@ -88,8 +88,13 @@ HashMap *createMap(long capacity) {
 }
 // done
 void eraseMap(HashMap *map, char *key) {
-  // falta searchmapxd
+  Pair *remove = searchMap(map, key);
+  if (remove != NULL) {
+    remove->key = NULL;
+    (map->size)--;
+  }
 }
+//: D
 
 Pair *searchMap(HashMap *map, char *key) {
   int posicion = hash(key, map->capacity);
