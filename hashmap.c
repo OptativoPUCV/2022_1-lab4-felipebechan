@@ -86,7 +86,7 @@ HashMap *createMap(long capacity) {
   map->current = -1;
   return map;
 }
-
+// done
 void eraseMap(HashMap *map, char *key) {}
 
 Pair *searchMap(HashMap *map, char *key) { return NULL; }
