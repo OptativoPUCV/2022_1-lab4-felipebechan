@@ -109,7 +109,7 @@ Pair *searchMap(HashMap *map, char *key) {
   }
   return NULL;
 }
-
+//done
 Pair *firstMap(HashMap *map) {
   // itera
   for (int i = 0; i < map->capacity; i++) {
@@ -124,7 +124,7 @@ Pair *firstMap(HashMap *map) {
 
   return NULL;
 }
-//done
+// done
 Pair *nextMap(HashMap *map) {
   // itera desde current
   for (int i = map->current + 1; i < map->capacity; i++) {
