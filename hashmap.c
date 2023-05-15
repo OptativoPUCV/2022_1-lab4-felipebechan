@@ -57,7 +57,7 @@ void insertMap(HashMap *map, char *key, void *value) {
   map->current = posicion;       // update pos actual
   map->size++;                   // ++
 }
-
+//done
 void enlarge(HashMap *map) {
   enlarge_called = 1;               // no borrar (testing purposes)
   Pair **OldBuckets = map->buckets; // referencia oldb
