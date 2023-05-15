@@ -59,7 +59,19 @@ void insertMap(HashMap *map, char *key, void *value) {
 }
 
 void enlarge(HashMap *map) {
-  enlarge_called = 1; // no borrar (testing purposes)
+  enlarge_called = 1;               // no borrar (testing purposes)
+  Pair **OldBuckets = map->buckets; // referencia oldb
+  map->capacity *= 2;               // *2 capacidad
+  Pair **newA =
+      calloc(sizeof(Pair *), map->capacity); // nuevo arreglo de b con ++*2
+  map->buckets = newA;
+  // recorrer e insertar
+  for (int i = 0; i < map->capacity / 2; i++) {
+    if (OldBuckets[i] != NULL && OldBuckets[i]->key != NULL) {
+      insertMap(map, OldBuckets[i]->key, OldBuckets[i]->value);
+      // insertar again en mapa
+    }
+  }
 }
 
 HashMap *createMap(long capacity) { return NULL; }
