@@ -87,7 +87,9 @@ HashMap *createMap(long capacity) {
   return map;
 }
 // done
-void eraseMap(HashMap *map, char *key) {}
+void eraseMap(HashMap *map, char *key) {
+  // falta searchmapxd
+}
 
 Pair *searchMap(HashMap *map, char *key) { return NULL; }
 
