@@ -125,4 +125,16 @@ Pair *firstMap(HashMap *map) {
   return NULL;
 }
 
-Pair *nextMap(HashMap *map) { return NULL; }
+Pair *nextMap(HashMap *map) {
+  // itera desde current
+  for (int i = map->current + 1; i < map->capacity; i++) {
+    // si current no esta vacio tiene key
+    if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
+      // maps current a current
+      map->current = i;
+
+      return map->buckets[i];
+    }
+  }
+  return NULL;
+}
