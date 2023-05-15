@@ -57,7 +57,9 @@ void insertMap(HashMap *map, char *key, void *value) {
   map->current = posicion;       // update pos actual
   map->size++;                   // ++
 }
-//done
+
+// done
+
 void enlarge(HashMap *map) {
   enlarge_called = 1;               // no borrar (testing purposes)
   Pair **OldBuckets = map->buckets; // referencia oldb
@@ -73,7 +75,9 @@ void enlarge(HashMap *map) {
     }
   }
 }
-//done
+// done
+
+// falta
 HashMap *createMap(long capacity) { return NULL; }
 
 void eraseMap(HashMap *map, char *key) {}
