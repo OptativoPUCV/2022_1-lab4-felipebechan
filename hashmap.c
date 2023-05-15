@@ -91,7 +91,12 @@ void eraseMap(HashMap *map, char *key) {
   // falta searchmapxd
 }
 
-Pair *searchMap(HashMap *map, char *key) { return NULL; }
+Pair *searchMap(HashMap *map, char *key) {
+  int posicion = hash(key, map->capacity);
+  // while (map->buckets[posicion] != NULL) {
+  // }
+  return NULL;
+}
 
 Pair *firstMap(HashMap *map) { return NULL; }
 

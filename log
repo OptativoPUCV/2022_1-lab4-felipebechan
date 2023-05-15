@@ -46,3 +46,14 @@ Mon 15 May 2023 01:50:53 PM UTC:
  tests:  6|3
 total_score: 40/70
 631cf04
+Mon 15 May 2023 01:57:24 PM UTC: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:95:7: error: unused variable ‘posicion’ [-Werror=unused-variable]
+   95 |   int posicion = hash(key, map->capacity);
+      |       ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8ba6132
